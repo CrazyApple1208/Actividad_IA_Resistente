@@ -11,19 +11,17 @@ real que justifique el desarrollo de un sistema de información para la
 gestión de préstamo y devolución de equipos tecnológicos (computadores 
 portátiles, tabletas, proyectores) en una institución educativa.
 
-**Premisa de la actividad:** *"No diseñen primero. Entiendan primero."*
-
 ---
 
 ## 👥 Integrantes del squad
 
 | Nombre | Rol en la actividad | Fase responsable |
 |---|---|---|
-| [Nombre 1] | [Rol] | Fase 1 — Stakeholders |
-| [Nombre 2] | [Rol] | Fase 2 — PESTEL |
-| [Nombre 3] | [Rol] | Fase 3 — Pain Points |
-| Julian Camilo Vargas Carvajal | Product Owner | **Fase 4 — Problem/Solution Fit** |
-| [Nombre 5] | [Rol] | Fase 5 — Lean Canvas |
+| Juan Esteban Pineda Gonzalez | Scrum Master | Fase 1 — Stakeholders |
+| Juan Esteban Castellanos Forero | Developer | Fase 2 — PESTEL |
+| Juan Pablo Vergara Pinillos | Developer | Fase 3 — Pain Points |
+| Julian Camilo Vargas Carvajal | Product Owner | Fase 4 — Problem/Solution Fit |
+| Jefferson David Rodriguez Guarnizo | Developer | Fase 5 — Lean Canvas |
 | [Todos] | Defensa | Fase 6 — IA + Fase 7 — Defensa |
 
 ---
