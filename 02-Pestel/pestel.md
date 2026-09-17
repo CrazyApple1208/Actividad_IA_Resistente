@@ -1,0 +1,23 @@
+# Análisis PESTEL - Sistema de Préstamos de Equipos Tecnológicos
+
+A continuación, se presenta el análisis exhaustivo de las seis dimensiones del macroentorno que impactan el sistema de préstamos de la institución. Se han priorizado y marcado como **(RELEVANTES)** los factores Tecnológico y Económico, ya que son los que dictan la viabilidad arquitectónica y financiera del proyecto, cumpliendo con la premisa de entender el entorno antes de proponer soluciones.
+
+### 1. Factor Político
+Este factor abarca las normativas internas y políticas institucionales frente a la administración de bienes públicos y recursos físicos. Al tratarse de equipos de la universidad, existen reglamentos de uso de laboratorios que estipulan quién tiene derecho al préstamo, los tiempos máximos permitidos y las sanciones por retraso o daño. El nuevo sistema no puede ser solo un registro; debe funcionar como un motor de reglas de negocio que traduzca estas políticas en acciones automatizadas (por ejemplo, bloqueos automáticos de cuenta para usuarios morosos y generación de reportes para procesos disciplinarios).
+
+### 2. Factor Económico (RELEVANTE)
+**Argumento de impacto:** La ineficiencia operativa del modelo actual representa una fuga de capital silenciosa pero constante para la institución. El descontrol de los inventarios, sumado a los retrasos no penalizados por la falta de trazabilidad, genera un fenómeno de "falsa escasez". 
+**Condicionante del proyecto:** Esto puede llevar a la administración a aprobar presupuestos injustificados para la compra de nuevos portátiles o proyectores, asumiendo erróneamente que la demanda supera la oferta, cuando en realidad el problema es el acaparamiento. El proyecto de software se justifica financieramente mediante el Retorno de Inversión (ROI): el costo de las horas de desarrollo, despliegue y mantenimiento del sistema será significativamente menor que el costo anual de reponer hardware perdido o de comprar equipos innecesarios.
+
+### 3. Factor Social
+Involucra la cultura académica y el comportamiento de la comunidad (estudiantes y docentes) frente a los recursos compartidos. Actualmente, la falta de un sistema estricto de auditoría fomenta el acaparamiento y la irresponsabilidad en los tiempos de entrega. Además, la frustración recurrente de un usuario que reserva un equipo y no lo encuentra en el momento de su clase afecta negativamente el clima académico, generando desconfianza en los procesos administrativos de la universidad.
+
+### 4. Factor Tecnológico (RELEVANTE)
+**Argumento de impacto:** La raíz del problema expuesto en el caso radica en una severa deuda técnica y una arquitectura de la información deficiente. El uso de herramientas fragmentadas (formularios, correos, hojas de cálculo) viola principios básicos de integridad de datos y normalización (como la Tercera Forma Normal - 3NF). Al carecer de una única fuente de verdad (Single Source of Truth), el sistema sufre de anomalías de actualización: un equipo cambia a "Prestado" en el Excel del auxiliar, pero sigue apareciendo "Disponible" en el canal de reservas de los estudiantes.
+**Condicionante del proyecto:** Esto dicta la arquitectura del nuevo desarrollo. Es imperativo abandonar los registros estáticos asíncronos e implementar un sistema puramente transaccional. Se requerirá una arquitectura robusta (por ejemplo, un patrón Modelo-Vista-Controlador) para garantizar propiedades ACID en la base de datos, asegurando que la "Vista" del estudiante consulte en tiempo real el "Modelo" centralizado, impidiendo las reservas duplicadas.
+
+### 5. Factor Ecológico
+La gestión de los recursos físicos tiene un impacto ambiental directo. La digitalización completa del proceso eliminará la dependencia de planillas impresas y formatos de papel. De manera más crítica, al tener un control de estados automatizado, se podrá medir el tiempo de uso real de cada equipo para programar ciclos de mantenimiento preventivo. Esto reduce la tasa de fallos por sobrecalentamiento o desgaste, extendiendo la vida útil del hardware y mitigando la generación de basura electrónica (e-waste).
+
+### 6. Factor Legal
+El diseño de la base de datos y la gestión de credenciales del sistema deben cumplir estrictamente con la normativa nacional (Ley Estatutaria 1581 de 2012 de Protección de Datos Personales en Colombia). Dado que el sistema almacenará historiales de uso, nombres, correos y posibles sanciones de los miembros de la comunidad académica, se debe garantizar la encriptación de datos sensibles y establecer políticas claras de privacidad y roles de acceso para evitar consultas no autorizadas por parte de terceros.
